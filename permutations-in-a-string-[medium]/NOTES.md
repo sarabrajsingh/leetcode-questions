@@ -1,0 +1,3 @@
+- what immediately comes to mind is to transform s1 into a character array and then put that into a hashset
+- then we can get the size of the set
+- neetcode solution recommends using frequency arrays to count the lowercase english alphabet digits

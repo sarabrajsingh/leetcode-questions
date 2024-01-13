@@ -1,0 +1,2 @@
+-> look at the head of both lists and choose the HEAD node that has the smallest value
+-> once we get to the end of the shortest list, we can just point the last node in the shorted list to the remaining HEAD node of the longer list.

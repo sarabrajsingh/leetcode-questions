@@ -1,0 +1,3 @@
+-> pay attention to the fact that the rows are already sorted from ascending order which is the perfect use case for binary search
+-> all the rows are already sorted too such that row[n] is guarenteed never to have larger elements than row[n+1]
+-> so we can consider this one giant 1-D array
