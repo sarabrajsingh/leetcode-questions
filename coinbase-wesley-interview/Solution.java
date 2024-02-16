@@ -25,7 +25,7 @@ class Transaction {
         this.id = id;
         this.fee = fee;
         this.size = size;
-        this.rank = (this.fee / this.size);
+        this.rank = ((double)fee / size);
     }
 
     @Override
@@ -65,13 +65,13 @@ class Solution {
 
     public static void main(String[] args) {
         Transaction[] test_mempool = new Transaction[]{
-            new Transaction(1, 10, 100),
-            new Transaction(2, 20, 100),
-            new Transaction(3, 50, 50),
-            new Transaction(4, 20, 1),
-            new Transaction(5, 95, 500),
-            new Transaction(6, 90, 50), 
-            new Transaction(7, 30, 10), 
+            new Transaction(1, 95, 500),
+            new Transaction(2, 90, 50), 
+            new Transaction(3, 30, 10), 
+            new Transaction(4, 10, 100), // 10
+            new Transaction(5, 20, 100), // 5
+            new Transaction(6, 50, 50), // 1
+            new Transaction(7, 20, 1), // 0.5
         };
         mine_block(test_mempool);
     }
