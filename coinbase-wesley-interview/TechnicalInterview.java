@@ -64,6 +64,7 @@ class TechincalInterview {
         System.out.println(res.toString());
     }
 
+    // greedy algorithm
     public static void mine_block2(Transaction[] mempool) {
         int blockSize = 100;
         // Sort transactions based on their rank (fee / size) in descending order
