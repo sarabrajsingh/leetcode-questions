@@ -1,22 +1,49 @@
-import java.util.ArrayList;
-import java.util.Random;
-
+import java.util.Arrays;
+import java.util.Stack;
 public class Solution {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
+        int target = 12;
+        int[] position = new int[]{10,8,0,5,3};
+        int[] speed = new int[]{2,4,1,1,3};
 
-        // add elements to the list
-        list.add("element1");
-        list.add("element2");
-        list.add("element3");
+        System.out.println(carFleet(target, position, speed));
+    }
 
-        // dynamically resize the list
-        list.ensureCapacity(100); // ensures list has capacity for at least 100 elements
+    static class Car {
+        int speed;
+        int position;
 
-        // randomly access elements
-        int randomIndex = new Random().nextInt(list.size()); // get a random index between 0 and list.size() - 1
-        String randomElement = list.get(randomIndex); // get the element at the random index
+        public Car(int position, int speed) {
+            this.position = position;
+            this.speed = speed;            
+        }
+    }
 
-        System.out.println("Random element: " + randomElement);
+    public static int carFleet(int target, int[] position, int[] speed) {
+        
+        if (position.length == 1) return 1;
+
+        Stack<Double> stack = new Stack<>();
+
+        Car[] cars = new Car[position.length];
+
+        for (int i = 0; i < position.length; i++) {
+            Car c = new Car(position[i], speed[i]);
+            cars[i] = c;
+        }
+
+        Arrays.sort(cars, java.util.Comparator.comparingInt(car -> car.position));
+
+        for (int i = cars.length - 1; i >= 0; i--) {
+            double timeToTarget = (double) (target - cars[i].position) / cars[i].speed;
+
+            if (!stack.isEmpty() && timeToTarget <= stack.peek()) {
+                continue;
+            } else {
+                stack.push(timeToTarget);
+            }
+        }
+
+        return stack.size();
     }
 }

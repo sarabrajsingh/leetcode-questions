@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
 )
@@ -29,15 +28,15 @@ func main() {
 		log.Fatal("couldn't hit GET request endpoint")
 	}
 
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatal("couldn't read response body")
-	}
+	// body, err := io.ReadAll(resp.Body)
+	// if err != nil {
+	// 	log.Fatal("couldn't read response body")
+	// }
 
 	defer resp.Body.Close()
 
 	var users []User
-	if err = json.Unmarshal(body, &users); err != nil {
+	if err = json.NewDecoder(resp.Body).Decode(&users); err != nil {
 		log.Fatal("couldn't unmarshal json")
 	}
 
