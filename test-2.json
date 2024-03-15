@@ -1,0 +1,64 @@
+{
+    "company": "Tech Corp",
+    "employees": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "age": 35,
+            "position": "Software Engineer",
+            "salary": 100000,
+            "skills": [
+                "Python",
+                "Java",
+                "SQL"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "age": 28,
+            "position": "Data Scientist",
+            "salary": 110000,
+            "skills": [
+                "R",
+                "Python",
+                "Machine Learning"
+            ]
+        }
+    ],
+    "departments": {
+        "engineering": {
+            "manager": "Alice Johnson",
+            "team_count": 3,
+            "teams": [
+                "Backend",
+                "Frontend",
+                "DevOps"
+            ]
+        },
+        "data_science": {
+            "manager": "Bob Williams",
+            "team_count": 2,
+            "teams": [
+                "Analytics",
+                "Machine Learning"
+            ]
+        }
+    },
+    "projects": [
+        {
+            "name": "Project X",
+            "description": "Developing a new software product",
+            "team": "Backend",
+            "start_date": "2024-01-01",
+            "end_date": "2024-06-30"
+        },
+        {
+            "name": "Project Y",
+            "description": "Building a data analytics platform",
+            "team": "Analytics",
+            "start_date": "2024-02-15",
+            "end_date": "2024-08-31"
+        }
+    ]
+}

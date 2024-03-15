@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.example.proto;
+
+service DateService {
+    rpc GetCurrentDate (EmptyRequest) returns (DateResponse) {}
+}
+
+message DateResponse {
+    string date = 1;
+}
+
+message EmptyRequest {}
