@@ -1,0 +1,4 @@
+- process the most frequent character first
+- there is no native maxHeap in python so flip the sign of the integers that we push to the maxHeap
+- use an auxiliary and parallel queue to keep track of what's left to process and when it can be processed. this can be processed as a tuple
+- the time-to-process is the current time plus the cooldown time
