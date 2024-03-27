@@ -1,0 +1,4 @@
+-> in two sum, we fixed on number and scanned the array for another number
+-> in three sum, we can fix another number and then the problem becomes two sum again
+-> ensure that the array is sorted beforehand
+-> 
