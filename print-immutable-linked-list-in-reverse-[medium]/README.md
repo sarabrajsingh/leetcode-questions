@@ -1,0 +1,1 @@
+-> anytime you want to reverse something, always consider using something like a stack that will help with reversals as you traverse through a collection

@@ -1,0 +1,4 @@
+-> everything needs to be done inplace
+-> we have indices, and they are relative to the original string and we can't mutate too much of the string because the indices will become invalid.
+-> anytime we have multiple overlapping arrays, try and `zip` them together in python
+->
